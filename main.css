@@ -1,0 +1,33 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: lightgrey;
+}
+
+header {
+  width: 100%;
+  background: dimgrey;
+  color: white;
+  padding: 10px 15px;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.advertence {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.advertence__content {
+  text-align: center;
+  font-size: 30px;
+  color: lightslategrey;
+}
