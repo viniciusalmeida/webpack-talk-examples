@@ -13,12 +13,18 @@ class MenuComponent extends ComponentBase {
   }
 
   @on('click', '[data-action]')
-  menuToggle(event) {
-    event.preventDefault();
-
+  menuToggle(event = false) {
+    if (event) event.preventDefault();
     this.container
       .find('[data-menu-items]')
       .toggleModifier('opened');
+  }
+
+  @on('click', '[data-show-about]')
+  openAboutModal(event) {
+    event.preventDefault();
+    this.menuToggle();
+    $.modal({ message: '<b>About</b> section in the site!' });
   }
 }
 

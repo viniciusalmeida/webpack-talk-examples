@@ -15,12 +15,29 @@
   position: absolute;
   background: white;
   color: black;
-  top: 100%;
+  top: calc(100% + 3px);
   list-style: none;
   right: 20px;
   font-size: 20px;
   padding: 10px 20px;
   display: none;
+  border-radius: 5px;
+}
+
+.menu__content__item {
+  cursor: pointer;
+}
+
+.menu__content:before {
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid white;
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: 6px;
 }
 
 .menu__content--opened {
