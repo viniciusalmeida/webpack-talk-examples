@@ -1,0 +1,36 @@
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 100;
+}
+
+.modal {
+  position: fixed;
+  margin: 0 auto;
+  background: white;
+  z-index: 101;
+  padding: 10px 20px;
+  min-width: 400px;
+  min-height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.modal__close-button {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.modal__content {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
