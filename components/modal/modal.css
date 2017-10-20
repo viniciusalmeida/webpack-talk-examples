@@ -1,11 +1,24 @@
+@keyframes animateBackgroundForOverlay {
+  from { background-color: none }
+  to { background-color: rgba(0, 0, 0, .5) }
+}
+
 .modal-overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, .5);
   z-index: 100;
+  animation-name: animateBackgroundForOverlay;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animateModal {
+  from { opacity: 0; transform: translate(-50%, -80%) }
+  to { opacity: 1; transform: translate(-50%, -50%) }
 }
 
 .modal {
@@ -20,6 +33,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
+  animation-name: animateModal;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .modal__close-button {
@@ -30,7 +47,7 @@
 }
 
 .modal__content {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 20px;
   text-align: center;
 }
