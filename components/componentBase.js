@@ -3,6 +3,7 @@ import _ from 'underscore';
 
 export default class ComponentBase {
   constructor(options) {
+    this.options = options;
     this.container = $(options.element);
     this.render();
     this.attachEvents();
@@ -13,10 +14,16 @@ export default class ComponentBase {
   }
 
   attachEvents() {
-    if (this.events.length > 1) { return }
-
+    if (this.events && this.events.length < 1) { return }
     _.each(this.events, (event) => {
       this.container.on(event.event, event.selector, event.callback.bind(this));
+    });
+  }
+
+  detachEvents() {
+    if (this.events && this.events.length < 1) { return }
+    _.each(this.events, (event) => {
+      this.container.off(event.event, event.selector);
     });
   }
 }

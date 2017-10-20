@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-export default function componentToPluginConversor(pluginName, pluginClass) {
+export default function componentToPluginConverter(pluginName, pluginClass, shorthand = false) {
   $.fn[pluginName] = function (options = {}) {
     return this.each((_i, element) => {
       const dispatcher = $(element);
@@ -9,4 +9,6 @@ export default function componentToPluginConversor(pluginName, pluginClass) {
       dispatcher.data('pluginData', new pluginClass(params));
     });
   };
+
+  if (shorthand) $[pluginName] = (options) => $({})[pluginName](options)
 }
