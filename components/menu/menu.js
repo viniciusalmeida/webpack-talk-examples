@@ -6,6 +6,7 @@ import 'jQuery.toggleModifier';
 
 import './menu.css';
 import componentTemplate from './template.html';
+import aboutContent from './aboutItemTemplate.html';
 
 class MenuComponent extends ComponentBase {
   render() {
@@ -24,7 +25,7 @@ class MenuComponent extends ComponentBase {
   openAboutModal(event) {
     event.preventDefault();
     this.menuToggle();
-    $.modal({ message: '<b>About</b> section in the site!' });
+    $.modal({ message: aboutContent() });
   }
 }
 

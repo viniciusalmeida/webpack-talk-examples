@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import componentToPluginConversor from '../componentToPluginConverter';
+import componentToPluginConverter from '../componentToPluginConverter';
 import ComponentBase from '../componentBase';
 import on from '../../decorators/on';
 
@@ -20,4 +20,4 @@ class ModalComponent extends ComponentBase {
   }
 }
 
-componentToPluginConversor('modal', ModalComponent, true);
+componentToPluginConverter('modal', ModalComponent, true);

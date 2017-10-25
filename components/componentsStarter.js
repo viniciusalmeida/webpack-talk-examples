@@ -2,7 +2,7 @@ import $ from 'jquery';
 import _ from 'underscore';
 
 export default function() {
-  // This code is used to find out the self-discoverable components in the page
+  // This code is used to find out the components usage in the page
   // in order to trigger the initialization for each one of them
   $('[data-component]').not('[started=true]').each(function (index, elem) {
     const dispatcher = $(elem);

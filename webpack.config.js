@@ -18,7 +18,6 @@ module.exports = {
       exclude: /node_modules/,
       query: {
         presets: ['es2015'],
-        // I don't know why babel-plugin-transform-decorators doesn't works
         plugins: ['transform-decorators-legacy']
       }
     }, {
@@ -30,17 +29,11 @@ module.exports = {
     }, {
       test: /.css$/,
       use: ExtractTextPlugin.extract({
-        fallback: "style-loader",
         use: "css-loader"
       })
     }],
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
-    })
+    new ExtractTextPlugin('style.css')
   ]
 };
