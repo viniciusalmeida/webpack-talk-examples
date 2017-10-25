@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import componentToPluginConversor from '../componentToPluginConverter';
+import componentToPluginConverter from '../componentToPluginConverter';
 import ComponentBase from '../componentBase';
 import on from '../../decorators/on';
 import 'jQuery.toggleModifier';
@@ -29,4 +29,4 @@ class MenuComponent extends ComponentBase {
   }
 }
 
-componentToPluginConversor('menu', MenuComponent);
+componentToPluginConverter('menu', MenuComponent);

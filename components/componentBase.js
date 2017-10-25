@@ -5,7 +5,7 @@ export default class ComponentBase {
   constructor(options) {
     this.options = options;
     this.container = $(options.element);
-    this.render();
+    this.render(); // I create that as a convention
     this.attachEvents();
   }
 
